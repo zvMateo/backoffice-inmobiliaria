@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
-    "dev:tunnel": "next dev --env-file .env.tunnel",
+    "dev": "node --max-old-space-size=4096 node_modules/next/dist/bin/next dev",
+    "dev:tunnel": "node --max-old-space-size=4096 node_modules/next/dist/bin/next dev --env-file .env.tunnel",
     "build:tunnel": "next build --env-file .env.tunnel",
     "start:tunnel": "next start --env-file .env.tunnel",
     "lint": "next lint",
